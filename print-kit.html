@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="description" content="Four printable cards for James Cadwallader. An imaginary mining company. A real origin story."><title>Saturday, Reopened. — Four-card print kit</title><style>
+:root{--paper:#f1eee4;--ink:#26342b;--acid:#d9f26b;--olive:#475437;--rule:#a5ad96;--muted:#626f56}
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:"Avenir Next",Avenir,Arial,sans-serif;background:#d8ddcf;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;font-kerning:normal}
+.screen-note{max-width:816px;margin:24px auto 18px;padding:0 8px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:14px}.screen-note p{margin:0;line-height:1.5}.screen-note strong{font-weight:700}.screen-note button{background:var(--ink);color:var(--paper);border:0;padding:13px 19px;font:600 14px "Avenir Next",Arial,sans-serif;cursor:pointer;white-space:nowrap}.screen-note button:focus-visible{outline:3px solid #526e18;outline-offset:3px}
+.sheet{width:8.5in;height:11in;position:relative;margin:0 auto 28px;background:white;box-shadow:0 5px 24px #26342b20;overflow:hidden;break-after:page;page-break-after:always}.sheet:last-of-type{break-after:auto;page-break-after:auto}.cut-marks{position:absolute;inset:0;width:8.5in;height:11in;pointer-events:none}.sheet-side{position:absolute;left:29px;top:410px;writing-mode:vertical-rl;transform:rotate(180deg);font:8px "Menlo","Courier New",monospace;letter-spacing:1.3px;color:#65705c;text-transform:uppercase}.sheet-side.right{left:auto;right:28px;top:430px;transform:none}.sheet-mid{position:absolute;left:87px;top:521px;font:6.7px "Menlo","Courier New",monospace;color:#65705c;letter-spacing:.4px}
+.card{position:absolute;left:.75in;width:7in;height:5in;overflow:hidden;padding:23px 26px;background:var(--paper);border:.5px solid #8b967a}.card[data-slot="1"]{top:.375in}.card[data-slot="2"]{top:5.625in}.mono,.eyebrow,.source-label,.footer-code,.art-caption,.sample-tag,.question-no{font-family:"Menlo","Courier New",monospace}.masthead{height:32px;border-bottom:1px solid var(--ink);display:flex;align-items:flex-start;justify-content:space-between;gap:8px;color:var(--ink)}.masthead>.mono{font-size:9px;letter-spacing:1px;padding-top:5px}.brand{font-size:10px;letter-spacing:1.5px;font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:8px;line-height:22px}.brand-mark{width:27px;height:20px}.eyebrow{margin:0;font-size:9px;line-height:1.5;letter-spacing:1.1px;text-transform:uppercase}h1,h2,p{margin-top:0}h1,h2{font-weight:800;letter-spacing:-2px}h1{font-size:48px;line-height:.99;margin:16px 0 14px}h2{font-size:53px;line-height:1.04;margin:11px 0 19px;letter-spacing:-2.2px}
+.cover-grid{display:grid;grid-template-columns:380px 1fr;gap:0;margin-top:21px;height:307px}.cover-words{position:relative;z-index:2}.hook{font-size:20px;font-weight:600;line-height:1.25;margin:0 0 15px}.intro{font-size:12px;line-height:1.6;max-width:322px;margin-bottom:13px}.ritual{font:9px/1.6 "Menlo","Courier New",monospace;max-width:280px;letter-spacing:.1px}.cover-figure{position:relative;margin-top:-15px;margin-left:-11px}.specimen-art{width:100%;height:100%;display:block}.cover-art{width:244px;height:309px;transform:rotate(-7deg);transform-origin:50% 50%}.cover-figure p{position:absolute;right:2px;bottom:18px;max-width:170px;text-align:right;font-size:7px;line-height:1.5;letter-spacing:.8px;margin:0}.cover-bottom{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-top:3px;border-top:1px solid var(--ink);padding-top:12px}.fiction{font-size:12px;font-weight:700;margin:0;letter-spacing:-.1px}.cover-sender{font-size:9px;margin:0;white-space:nowrap}.cover-order{display:flex;justify-content:space-between;border-top:1px solid #a5ad96;margin-top:11px;padding-top:8px;font-size:7px;letter-spacing:.4px}
+.sample-layout{display:grid;grid-template-columns:351px 1fr;gap:13px;height:339px}.sample-words{padding-top:28px}.body-copy{font-size:15px;line-height:1.55;max-width:325px;min-height:76px;margin-bottom:21px}.payoff{display:flex;align-items:flex-start;gap:10px;max-width:321px;padding-top:13px;border-top:1px solid #a5ad96}.payoff p{font-size:12px;line-height:1.5;margin:0}.tiny-cross{font:18px/1.1 "Menlo","Courier New",monospace;color:var(--olive)}.sample-tag{display:flex;align-items:center;gap:12px;margin-top:20px;font-size:8px;line-height:1.4;letter-spacing:.25px;text-transform:uppercase}.symbol{display:inline-flex;width:33px;height:33px;background:var(--acid);align-items:center;justify-content:center;font-size:21px;text-transform:none;letter-spacing:-1px;border:1px solid var(--ink)}.art-panel{position:relative;margin-top:9px;background:#e5e7d6;border-left:1px solid #adb59a;margin-right:-26px;padding:0 13px 22px 0}.art-panel .specimen-art{height:296px;max-width:230px;margin-left:2px}.art-caption{position:absolute;bottom:12px;left:34px;font-size:7px;letter-spacing:1px}
+.card-footer{position:absolute;bottom:20px;left:26px;right:26px;min-height:39px;border-top:1px solid var(--ink);padding-top:10px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.card-footer>div{min-width:0}.source-label{display:block;text-transform:uppercase;font-size:6.6px;letter-spacing:.6px;margin-bottom:3px}.card-footer a{display:block;color:var(--ink);font:8.5px/1.3 "Avenir Next",Arial,sans-serif;white-space:nowrap;text-decoration:none}.footer-code{text-align:right;font-size:6.8px;line-height:1.6;letter-spacing:.7px;white-space:nowrap}
+.judgment-head{display:flex;justify-content:space-between;align-items:flex-start;padding-top:18px}.judgment h2{font-size:45px;margin:6px 0 10px}.last-symbol{width:117px;text-align:right}.last-symbol>span{font:52px/.8 "Avenir Next",Arial,sans-serif;background:var(--acid);display:inline-flex;justify-content:center;align-items:center;width:59px;height:43px;border:1px solid var(--ink);padding-bottom:15px}.last-symbol p{font:7px "Menlo","Courier New",monospace;text-transform:uppercase;letter-spacing:.3px;margin-top:8px;white-space:nowrap}.judgment-body{font-size:13px;line-height:1.5;max-width:545px;margin-bottom:12px}.question-area{border-top:1px solid #a5ad96;padding-top:10px}.question-no{font-size:6.8px;letter-spacing:1.1px;display:block;margin-bottom:5px}.question{font-size:23px;line-height:1.16;font-weight:700;letter-spacing:-.7px;max-width:530px;margin:0 0 13px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:10px}.choice{display:flex;align-items:center;gap:10px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:9px 9px 8px 0}.answer-circle{width:15px;height:15px;display:block;border:1px solid var(--ink);border-radius:50%;background:#faf9f3;flex:none}.choice strong{display:block;font-size:13px;font-weight:700;letter-spacing:.9px;line-height:1.1}.choice div>span{display:block;font-size:9px;margin-top:4px}.reply-instruction{font-size:10.5px;line-height:1.45;margin-bottom:10px}.reply-instruction strong{font-size:10px;letter-spacing:.3px}.closing{font-size:9px;line-height:1.4;color:#49553e;margin:0;white-space:nowrap}.judgment .card-footer{bottom:17px;padding-top:8px;min-height:35px}
+@page{size:letter portrait;margin:0}
+@media print{html,body{width:8.5in;margin:0;padding:0;background:white}.screen-note{display:none}.sheet{margin:0;box-shadow:none}.card{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+</style></head>
+<body><div class="screen-note"><p><strong>Saturday, Reopened. / Physical edition</strong><br>2 US Letter sheets · Four 7 × 5 in cards · Print at 100% with background graphics.</p><button type="button" onclick="window.print()">Print four cards</button></div><main>
+<section class="sheet" aria-label="Print sheet 1 of 2"><svg class="cut-marks" viewBox="0 0 816 1056" aria-hidden="true"><g fill="none" stroke="#626b5e" stroke-width=".6"><path d="M68,36h-8M72,32v-8"/><path d="M68,516h-8M72,520v8"/><path d="M748,36h8M744,32v-8"/><path d="M748,516h8M744,520v8"/><path d="M68,540h-8M72,536v-8"/><path d="M68,1020h-8M72,1024v8"/><path d="M748,540h8M744,536v-8"/><path d="M748,1020h8M744,1024v8"/></g></svg><span class="sheet-side">SATURDAY, REOPENED. / SHEET 1 OF 2</span><span class="sheet-side right">7 × 5 IN / TRIM AT CORNER MARKS</span><article class="card cover" id="cover" data-slot="1" data-card="cover">
+  <header class="masthead"><span class="brand"><svg viewBox="0 0 30 22" class="brand-mark" aria-hidden="true"><path d="M1 5h18l9 5H10zM1 11h18l9 5H10zM1 17h18" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>Saturday Mining Co.</span><span class="mono">FIELD KIT / 00—03</span></header>
+  <div class="cover-grid">
+    <div class="cover-words">
+      <p class="eyebrow">PREPARED FOR James Cadwallader</p>
+      <h1>SATURDAY,<br>REOPENED.</h1>
+      <p class="hook">The company you didn’t build.</p>
+      <p class="intro">James, I made you a field kit from an alternate timeline. Three samples. One unfinished question.</p>
+      <p class="ritual">Saturday. Dylan. A whiteboard. Post-it notes. No laptops.</p>
+    </div>
+    <div class="cover-figure"><svg class="specimen-art cover-art" viewBox="0 0 248 360" role="img" aria-label="An imaginary mining core opens into paper and Post-it strata">
+    <defs><pattern id="grid-openingc" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#7e8a68" stroke-width=".4" opacity=".28"/></pattern></defs>
+    <rect x="10" y="8" width="228" height="333" fill="url(#grid-openingc)"/>
+    <g fill="none" stroke="#536345" stroke-width=".7"><path d="M28 89v237m-4-237h8m-8 79h8m-8 79h8m-8 79h8M214 89v237m-4-237h8m-8 79h8m-8 79h8m-8 79h8"/></g>
+    <ellipse cx="129" cy="325" rx="63" ry="11" fill="#26342b" opacity=".08"/>
+    
+    <path d="M67 114L181 114V300C181 327 67 327 67 300Z" fill="#60704f" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M67 151C67 178 181 178 181 151V191C181 218 67 218 67 191Z" fill="#8e9874" stroke="#26342b" stroke-width="1"/>
+    <path d="M67 209C67 236 181 236 181 209V242C181 269 67 269 67 242Z" fill="#bec1a0" stroke="#26342b" stroke-width="1"/>
+    <path d="M67 263C67 290 181 290 181 263V301C181 327 67 327 67 301Z" fill="#394b35" stroke="#26342b" stroke-width="1"/>
+    <ellipse cx="124" cy="114" rx="57" ry="19" fill="#c9cfb7" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M78 142l23 5m-20 34l11 3m62-1l18-4m-71 59l21 3m-35 47l17 4m26-33l17 1m15 28l11-3m-19 22l9-2" fill="none" stroke="#26342b" stroke-width=".85" opacity=".6"/>
+    <path d="M91 169l14 39-9 24 19 40m40-83l-14 46 12 25-10 47" fill="none" stroke="#26342b" stroke-width=".85" opacity=".6"/>
+    
+    <path d="M54 95L151 67 205 103 108 132Z" fill="#dfdfc7" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M54 95v5l54 37 97-29v-5l-97 29z" fill="#aab291" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M49 73L146 45 200 81 103 110Z" fill="#f1eee4" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M49 73v5l54 37 97-29v-5l-97 29z" fill="#b9bfa3" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M68 43L150 21 191 51 109 75Z" fill="#d9f26b" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M78 44l40 19m-22-25l38 20m-19-26l36 20" fill="none" stroke="#26342b" stroke-width=".8" opacity=".42"/>
+    <path d="M36 20l37-10 23 17-38 11z" fill="#d9f26b" stroke="#26342b" stroke-width="1"/><path d="M178 19l27-7 18 13-28 8z" fill="#f1eee4" stroke="#26342b" stroke-width="1"/>
+    <path d="M70 347h112m-112-3v6m112-6v6" fill="none" stroke="#536345" stroke-width=".8"/>
+    </svg><p class="mono">THREE SAMPLES.<br>ONE UNFINISHED QUESTION.</p></div>
+  </div>
+  <div class="cover-bottom"><p class="fiction">An imaginary mining company. A real origin story.</p><p class="cover-sender">From Josh’s assistant</p></div>
+  <div class="cover-order mono">OPEN IN ORDER <span>01 / LITHIUM</span><span>02 / ANSWERS</span><span>03 / JUDGMENT</span></div>
+</article><span class="sheet-mid">SINGLE-SIDED · US LETTER · ACTUAL SIZE 100% · CUT FOUR CARDS · STACK 00 → 03</span><article class="card sample" id="specimen-01" data-slot="2" data-card="specimen-01">
+      <header class="masthead"><span class="brand"><svg viewBox="0 0 30 22" class="brand-mark" aria-hidden="true"><path d="M1 5h18l9 5H10zM1 11h18l9 5H10zM1 17h18" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>Saturday Mining Co.</span><span class="mono">SPECIMEN / 01</span></header>
+      <div class="sample-layout">
+        <div class="sample-words">
+          <p class="eyebrow">The decoy</p>
+          <h2>Lithium.</h2>
+          <p class="body-copy">You and Dylan once explored lithium mining. Here’s an imaginary field kit for that path.</p>
+          <div class="payoff"><span class="tiny-cross">+</span><p>No drills. No mining rights. Just a very different Saturday.</p></div>
+          <div class="sample-tag"><span class="symbol">Li</span><span>An idea from the board</span></div>
+        </div>
+        <div class="art-panel"><svg class="specimen-art " viewBox="0 0 248 360" role="img" aria-label="Imaginary geological core">
+    <defs><pattern id="grid-core" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#7e8a68" stroke-width=".4" opacity=".28"/></pattern></defs>
+    <rect x="10" y="8" width="228" height="333" fill="url(#grid-core)"/>
+    <g fill="none" stroke="#536345" stroke-width=".7"><path d="M28 89v237m-4-237h8m-8 79h8m-8 79h8m-8 79h8M214 89v237m-4-237h8m-8 79h8m-8 79h8m-8 79h8"/></g>
+    <ellipse cx="129" cy="325" rx="63" ry="11" fill="#26342b" opacity=".08"/>
+    
+    <path d="M67 114L181 114V300C181 327 67 327 67 300Z" fill="#60704f" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M67 151C67 178 181 178 181 151V191C181 218 67 218 67 191Z" fill="#8e9874" stroke="#26342b" stroke-width="1"/>
+    <path d="M67 209C67 236 181 236 181 209V242C181 269 67 269 67 242Z" fill="#bec1a0" stroke="#26342b" stroke-width="1"/>
+    <path d="M67 263C67 290 181 290 181 263V301C181 327 67 327 67 301Z" fill="#394b35" stroke="#26342b" stroke-width="1"/>
+    <ellipse cx="124" cy="114" rx="57" ry="19" fill="#c9cfb7" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M78 142l23 5m-20 34l11 3m62-1l18-4m-71 59l21 3m-35 47l17 4m26-33l17 1m15 28l11-3m-19 22l9-2" fill="none" stroke="#26342b" stroke-width=".85" opacity=".6"/>
+    <path d="M91 169l14 39-9 24 19 40m40-83l-14 46 12 25-10 47" fill="none" stroke="#26342b" stroke-width=".85" opacity=".6"/>
+    <ellipse cx="124" cy="114" rx="39" ry="12" fill="none" stroke="#8d9873" stroke-width=".8"/><path d="M99 115l23-6 30 7-18 6z" fill="#d9f26b" stroke="#26342b" stroke-width=".8"/>
+    <path d="M70 347h112m-112-3v6m112-6v6" fill="none" stroke="#536345" stroke-width=".8"/>
+    </svg><span class="art-caption mono">LITHIC / LAYER 01</span></div>
+      </div>
+      <footer class="card-footer"><div><span class="source-label">SOURCE / Origin story · 37:22</span><a href="https://www.knuckleup.co/episodes/james-cadwallader">https://www.knuckleup.co/episodes/james-cadwallader</a></div><span class="footer-code">FICTIONAL SPECIMEN<br>01 / 03</span></footer>
+    </article></section>
+<section class="sheet" aria-label="Print sheet 2 of 2"><svg class="cut-marks" viewBox="0 0 816 1056" aria-hidden="true"><g fill="none" stroke="#626b5e" stroke-width=".6"><path d="M68,36h-8M72,32v-8"/><path d="M68,516h-8M72,520v8"/><path d="M748,36h8M744,32v-8"/><path d="M748,516h8M744,520v8"/><path d="M68,540h-8M72,536v-8"/><path d="M68,1020h-8M72,1024v8"/><path d="M748,540h8M744,536v-8"/><path d="M748,1020h8M744,1024v8"/></g></svg><span class="sheet-side">SATURDAY, REOPENED. / SHEET 2 OF 2</span><span class="sheet-side right">7 × 5 IN / TRIM AT CORNER MARKS</span><article class="card sample" id="specimen-02" data-slot="1" data-card="specimen-02">
+      <header class="masthead"><span class="brand"><svg viewBox="0 0 30 22" class="brand-mark" aria-hidden="true"><path d="M1 5h18l9 5H10zM1 11h18l9 5H10zM1 17h18" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>Saturday Mining Co.</span><span class="mono">SPECIMEN / 02</span></header>
+      <div class="sample-layout">
+        <div class="sample-words">
+          <p class="eyebrow">The real seam</p>
+          <h2>Answers.</h2>
+          <p class="body-copy">While researching ideas, you noticed yourself reaching for Perplexity instead of Google.</p>
+          <div class="payoff"><span class="tiny-cross">+</span><p>The interesting deposit was above ground.</p></div>
+          <div class="sample-tag"><span class="symbol">?</span><span>A change in the question</span></div>
+        </div>
+        <div class="art-panel"><svg class="specimen-art " viewBox="0 0 248 360" role="img" aria-label="Geological core opening into paper and Post-it layers">
+    <defs><pattern id="grid-paper" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#7e8a68" stroke-width=".4" opacity=".28"/></pattern></defs>
+    <rect x="10" y="8" width="228" height="333" fill="url(#grid-paper)"/>
+    <g fill="none" stroke="#536345" stroke-width=".7"><path d="M28 89v237m-4-237h8m-8 79h8m-8 79h8m-8 79h8M214 89v237m-4-237h8m-8 79h8m-8 79h8m-8 79h8"/></g>
+    <ellipse cx="129" cy="325" rx="63" ry="11" fill="#26342b" opacity=".08"/>
+    
+    <path d="M67 114L181 114V300C181 327 67 327 67 300Z" fill="#60704f" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M67 151C67 178 181 178 181 151V191C181 218 67 218 67 191Z" fill="#8e9874" stroke="#26342b" stroke-width="1"/>
+    <path d="M67 209C67 236 181 236 181 209V242C181 269 67 269 67 242Z" fill="#bec1a0" stroke="#26342b" stroke-width="1"/>
+    <path d="M67 263C67 290 181 290 181 263V301C181 327 67 327 67 301Z" fill="#394b35" stroke="#26342b" stroke-width="1"/>
+    <ellipse cx="124" cy="114" rx="57" ry="19" fill="#c9cfb7" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M78 142l23 5m-20 34l11 3m62-1l18-4m-71 59l21 3m-35 47l17 4m26-33l17 1m15 28l11-3m-19 22l9-2" fill="none" stroke="#26342b" stroke-width=".85" opacity=".6"/>
+    <path d="M91 169l14 39-9 24 19 40m40-83l-14 46 12 25-10 47" fill="none" stroke="#26342b" stroke-width=".85" opacity=".6"/>
+    
+    <path d="M54 95L151 67 205 103 108 132Z" fill="#dfdfc7" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M54 95v5l54 37 97-29v-5l-97 29z" fill="#aab291" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M49 73L146 45 200 81 103 110Z" fill="#f1eee4" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M49 73v5l54 37 97-29v-5l-97 29z" fill="#b9bfa3" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M68 43L150 21 191 51 109 75Z" fill="#d9f26b" stroke="#26342b" stroke-width="1.2"/>
+    <path d="M78 44l40 19m-22-25l38 20m-19-26l36 20" fill="none" stroke="#26342b" stroke-width=".8" opacity=".42"/>
+    
+    <path d="M70 347h112m-112-3v6m112-6v6" fill="none" stroke="#536345" stroke-width=".8"/>
+    </svg><span class="art-caption mono">PAPER / LAYER 02</span></div>
+      </div>
+      <footer class="card-footer"><div><span class="source-label">SOURCE / Origin story · 37:22</span><a href="https://www.knuckleup.co/episodes/james-cadwallader">https://www.knuckleup.co/episodes/james-cadwallader</a></div><span class="footer-code">FICTIONAL SPECIMEN<br>02 / 03</span></footer>
+    </article><span class="sheet-mid">SINGLE-SIDED · US LETTER · ACTUAL SIZE 100% · CUT FOUR CARDS · STACK 00 → 03</span><article class="card judgment" id="specimen-03" data-slot="2" data-card="specimen-03">
+  <header class="masthead"><span class="brand"><svg viewBox="0 0 30 22" class="brand-mark" aria-hidden="true"><path d="M1 5h18l9 5H10zM1 11h18l9 5H10zM1 17h18" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>Saturday Mining Co.</span><span class="mono">SPECIMEN / 03</span></header>
+  <div class="judgment-head"><div><p class="eyebrow">The unmined part</p><h2>Judgment.</h2></div><div class="last-symbol"><span>…</span><p>One human answer</p></div></div>
+  <p class="judgment-body">Your September Profound note puts context and human judgment at the center. This last sample needs a little of yours.</p>
+  <div class="question-area"><span class="question-no mono">THE UNFINISHED QUESTION</span><p class="question">Was lithium the wildest idea on that whiteboard?</p></div>
+  <div class="choices" aria-label="Optional answer: circle one">
+    <div class="choice"><span class="answer-circle" aria-hidden="true"></span><div><strong>LITHIUM</strong><span>That was the wildest.</span></div></div><div class="choice"><span class="answer-circle" aria-hidden="true"></span><div><strong>WILDER</strong><span>There was something wilder.</span></div></div>
+  </div>
+  <p class="reply-instruction">Optional: circle one and hand this card back to Josh, or reply to Josh with<br><strong>LITHIUM</strong> or <strong>WILDER</strong>. One word is plenty.</p>
+  <p class="closing">Josh asked me to get your attention. I went back to the whiteboard. — Josh’s assistant</p>
+  <footer class="card-footer"><div><span class="source-label">SOURCE / James’s note · 16 September 2026</span><a href="https://www.tryprofound.com/blog/series-d">https://www.tryprofound.com/blog/series-d</a></div><span class="footer-code">FICTIONAL SPECIMEN<br>03 / 03</span></footer>
+</article></section>
+</main></body></html>
