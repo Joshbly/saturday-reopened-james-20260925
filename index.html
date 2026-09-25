@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A speculative field kit made for James Cadwallader by Josh’s assistant. An imaginary mining company. A real origin story.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; font-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Saturday, Reopened. — for James Cadwallader</title>
+  <style>
+    :root{--paper:#f1eee4;--light:#faf8f1;--ink:#26342b;--muted:#5c695e;--line:#c9cebb;--acid:#d9f26b;--olive:#64724f;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;--sans:"Avenir Next",Avenir,"Helvetica Neue",Arial,sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    button,a,input{font:inherit}
+    button,a{-webkit-tap-highlight-color:transparent}
+    button{color:inherit}
+    a{color:inherit}
+    button{cursor:pointer}
+    a:focus-visible,button:focus-visible,summary:focus-visible,textarea:focus-visible{outline:3px solid var(--olive);outline-offset:5px}
+    [tabindex="-1"]:focus{outline:none}
+    .skip{position:fixed;top:-100px;left:20px;z-index:10;padding:12px 20px;background:var(--ink);color:var(--paper)}
+    .skip:focus{top:14px}
+    .shell{max-width:1320px;margin:auto;padding:0 44px}
+    .masthead{height:98px;display:flex;align-items:center;justify-content:space-between;gap:28px;border-bottom:1px solid var(--line)}
+    .wordmark{display:flex;align-items:center;gap:12px;font-size:12px;line-height:1.25;font-weight:750;letter-spacing:.04em;text-transform:uppercase}
+    .mark{width:34px;height:34px;display:grid;place-items:center;border:1px solid currentColor;font-size:17px;font-family:Georgia,serif;font-weight:400}
+    .mast-meta{display:flex;align-items:center;gap:26px;font:10px/1.6 var(--mono);letter-spacing:.07em;text-transform:uppercase}
+    .recipient{border-left:1px solid var(--line);padding-left:26px}
+    .recipient strong{display:block;font-weight:600;color:var(--ink)}
+    .recipient span{color:var(--muted)}
+    .edition{color:var(--muted)}
+    .edition b{color:var(--ink);font-weight:500}
+    .stage{position:relative;margin:24px 0 0;border:1px solid var(--line);background:var(--light)}
+    .panel{display:grid;grid-template-columns:1fr 1fr;min-height:628px;overflow:hidden}
+    .panel[hidden]{display:none}
+    .panel-copy{padding:52px 0 44px 50px;display:flex;flex-direction:column;align-items:flex-start;position:relative;z-index:1}
+    .kicker{font:10px/1.6 var(--mono);letter-spacing:.09em;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin:0 0 25px}
+    .kicker::before{content:"";height:7px;width:7px;background:var(--olive);border-radius:50%}
+    .cover-title{font-size:clamp(55px,6.9vw,92px);font-weight:650;letter-spacing:-.08em;line-height:.94;margin:0 0 23px}
+    .cover-title span{display:block}
+    .cover-title .second{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-style:italic;letter-spacing:-.075em}
+    .subtitle{font-size:23px;line-height:1.27;letter-spacing:-.035em;margin:0 0 17px;font-weight:550;max-width:380px}
+    .intro{font-size:15px;line-height:1.65;max-width:340px;margin:0 0 27px;color:var(--muted)}
+    .fiction{font:10px/1.65 var(--mono);max-width:320px;margin:18px 0 0;color:var(--muted)}
+    .primary{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;padding:17px 20px;text-decoration:none;background:var(--ink);color:var(--paper);font-size:13px;line-height:1.2;border:1px solid var(--ink);transition:background .15s,transform .15s}
+    .primary:hover{background:#3d4c38;transform:translateY(-1px)}
+    .primary span{font-size:18px;font-family:Arial,sans-serif;line-height:1}
+    .button-note{font:10px/1.5 var(--mono);color:var(--muted);margin:12px 0 0}
+    .cover-art{position:relative;display:grid;place-items:center;min-width:0;min-height:590px;isolation:isolate}
+    .contour{position:absolute;inset:0;width:100%;height:100%;opacity:.33;pointer-events:none}
+    .corebox{position:relative;transform:rotate(-7deg);width:354px;height:424px;padding:20px;background:#415039;border:1px solid #6c775a;box-shadow:2px 4px 0 #798262,8px 12px 0 #36412e,18px 26px 36px #25372824;isolation:isolate}
+    .corebox::before{content:"";position:absolute;inset:6px;border:1px solid #91a4714d;pointer-events:none}
+    .box-head{display:flex;justify-content:space-between;gap:12px;color:#d7dfb7;font:8px/1.4 var(--mono);letter-spacing:.07em;border-bottom:1px solid #85926c;padding-bottom:13px}
+    .box-brand{font-size:23px;line-height:1.04;font-weight:650;letter-spacing:-.06em;color:#ecedd5;margin:17px 0 0}
+    .box-brand span{font-size:10px;letter-spacing:.06em;font-family:var(--mono);font-weight:400;display:block;margin-top:7px}
+    .tray{height:188px;display:flex;justify-content:space-between;gap:10px;position:relative;margin:20px 0 15px;padding:0 13px}
+    .well{position:relative;width:75px;height:175px;background:#24301f;border:1px solid #5b694b;border-radius:36px 36px 25px 25px;box-shadow:inset 4px 5px 8px #10190f66;display:flex;justify-content:center;align-items:center}
+    .rod{height:152px;width:53px;position:relative;border-radius:50% / 7%;box-shadow:3px 6px 5px #0006;overflow:hidden;border:1px solid #99a581}
+    .rod::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#1b291641,transparent 27%,#ffffff24 55%,#0f190f66);z-index:1}
+    .rod::after{content:"";position:absolute;top:-1px;height:13px;left:-1px;right:-1px;border-radius:50%;background:#adb897;border:1px solid #52604a;z-index:2}
+    .rod.one{background:repeating-linear-gradient(170deg,#a1ac87 0 18px,#788465 18px 26px,#b7bea5 26px 44px,#6d7a5b 44px 46px)}
+    .rod.two{background:repeating-linear-gradient(174deg,#c3c9ac 0 13px,#84916b 13px 20px,#e2dfbf 20px 36px,#d9f26b 36px 40px)}
+    .rod.three{background:repeating-linear-gradient(0deg,#eff0c9 0 11px,#9baf68 11px 12px,#e1efa1 12px 23px,#c6d092 23px 24px)}
+    .well-number{position:absolute;bottom:-18px;font:8px/1 var(--mono);color:#d7dfb7;letter-spacing:.08em}
+    .box-tape{background:var(--acid);color:var(--ink);padding:11px 11px 9px;transform:rotate(2deg);font:10px/1.25 var(--mono);text-transform:uppercase;letter-spacing:.025em;margin-top:19px;box-shadow:0 3px 5px #14200d26}
+    .box-tape b{display:block;font-size:13px;line-height:1.2;margin-top:3px;font-weight:600;letter-spacing:-.015em}
+    .artifact-caption{position:absolute;bottom:25px;left:25px;right:25px;display:flex;justify-content:space-between;align-items:flex-end;gap:18px;font:9px/1.5 var(--mono);color:var(--muted);letter-spacing:.03em;text-transform:uppercase}
+    .artifact-caption .plus{font-size:24px;line-height:1;font-weight:300}
+    .ritual-strip{display:flex;align-items:center;gap:16px;padding:18px 23px;border-top:1px solid var(--line);font:10px/1.65 var(--mono);letter-spacing:.015em;background:var(--paper)}
+    .ritual-strip .strip-label{color:var(--muted);text-transform:uppercase;letter-spacing:.07em;flex:none}
+    .ritual-strip .strip-rule{height:17px;width:1px;background:var(--line);flex:none}
+    .sample-title{font-size:clamp(63px,7.5vw,103px);line-height:1;letter-spacing:-.075em;font-weight:550;margin:7px 0 26px}
+    .sample-body{font-size:19px;line-height:1.55;letter-spacing:-.02em;max-width:395px;margin:0 0 22px}
+    .sample-payoff{font-family:Georgia,"Times New Roman",serif;font-size:24px;line-height:1.3;font-style:italic;letter-spacing:-.035em;max-width:355px;margin:0 0 35px}
+    .sample-nav{display:flex;align-items:center;gap:24px;margin-top:auto;padding-top:8px}
+    .back-link{font:10px/1.5 var(--mono);text-underline-offset:5px}
+    .sample-art{position:relative;isolation:isolate;min-height:628px;overflow:hidden;display:grid;place-items:center;background:#e7e9db}
+    .sample-art::before{content:"";position:absolute;inset:24px;border:1px solid #a5b18d66;z-index:-1}
+    .art-numeral{position:absolute;top:37px;left:46px;font-size:130px;line-height:1;font-weight:300;letter-spacing:-.08em;color:#9daa884d}
+    .vertical-caption{position:absolute;right:34px;top:53px;writing-mode:vertical-rl;font:9px/1.5 var(--mono);letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+    .core-svg{width:235px;height:424px;overflow:visible;filter:drop-shadow(12px 14px 10px #26342b25);transform:rotate(-9deg);margin-top:25px}
+    .specimen-tag{position:absolute;bottom:44px;left:40px;right:40px;padding:16px 20px;background:#faf8f1eF;border:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;box-shadow:0 4px 0 #5869440a;z-index:1}
+    .specimen-tag span{font:9px/1.5 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+    .specimen-tag strong{display:block;font-size:18px;font-weight:550;line-height:1.4;letter-spacing:-.03em;margin-top:2px}
+    .specimen-symbol{font:36px/1 Georgia,serif!important;text-transform:none!important;letter-spacing:-.04em!important}
+    .seam{background:#e1e6d4}
+    .seam-note{position:absolute;right:72px;top:176px;width:181px;min-height:186px;padding:22px 18px 27px;background:var(--acid);box-shadow:4px 7px 7px #26342b21;transform:rotate(7deg);font-family:Georgia,serif;font-size:30px;font-style:italic;line-height:1.02;letter-spacing:-.05em}
+    .seam-note::before,.blank-note::before{content:"";height:22px;position:absolute;top:0;left:0;right:0;background:#758d1913}
+    .seam-note small{display:block;font:8px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.05em;margin:0 0 22px;opacity:.8}
+    .paper-layer{fill:#f6f0d9;stroke:#6f7c54;stroke-width:1}
+    .final-copy{padding-top:41px;padding-bottom:31px}
+    .final-copy .kicker{margin-bottom:16px}
+    .final-copy .sample-title{font-size:74px;margin:0 0 17px}
+    .final-copy .sample-body{font-size:15px;max-width:365px;margin:0 0 17px;line-height:1.6;color:var(--muted)}
+    .question{font-size:25px;line-height:1.25;font-weight:550;letter-spacing:-.035em;margin:0 0 18px;max-width:360px}
+    .reply-options{display:flex;gap:10px;width:100%;max-width:380px}
+    .reply-option{background:transparent;border:1px solid #9caa8a;padding:12px 13px;min-height:68px;text-align:left;flex:1;transition:background .15s}
+    .reply-option:hover{background:#e7edcc}
+    .reply-option[aria-pressed="true"]{background:var(--acid);border-color:var(--ink)}
+    .reply-option strong{font:12px/1.5 var(--mono);letter-spacing:.055em;display:block}
+    .reply-option span{font-size:10px;line-height:1.5;display:block;margin-top:2px}
+    .draft-label{font:9px/1.6 var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:15px 0 7px}
+    .draft-box{width:100%;max-width:380px;display:flex;border:1px solid var(--line);background:#fffefa;align-items:center}
+    .draft-box textarea{resize:none;min-height:48px;height:48px;width:100%;border:0;background:transparent;color:var(--ink);font:11px/1.6 var(--mono);padding:13px 10px;outline-offset:0}
+    .copy-button{border:0;border-left:1px solid var(--line);background:var(--paper);padding:15px 12px;font:10px/1.4 var(--mono);align-self:stretch;min-width:61px}
+    .copy-button:hover{background:var(--acid)}
+    .copy-status{font:10px/1.6 var(--mono);color:var(--muted);min-height:16px;margin:6px 0 0;max-width:370px}
+    .reply-explainer{font-size:11px;line-height:1.55;color:var(--muted);margin:10px 0 0;max-width:368px}
+    .print-reply{display:none}
+    .human{background:#dfe7d1}
+    .blank-note{width:250px;height:282px;position:relative;transform:rotate(-6deg);background:var(--acid);padding:35px 25px;box-shadow:7px 14px 12px #26342b28;margin-top:7px}
+    .blank-note small{font:9px/1.6 var(--mono);letter-spacing:.07em;text-transform:uppercase;display:block}
+    .blank-note .handwriting{height:133px;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:108px;font-weight:400;font-style:italic;line-height:1;letter-spacing:-.1em}
+    .blank-note .note-rule{height:1px;background:#718c3f;position:absolute;bottom:57px;left:25px;right:25px}
+    .blank-note .note-bottom{font:8px/1.5 var(--mono);letter-spacing:.05em;text-transform:uppercase;position:absolute;bottom:24px;left:25px}
+    .blank-note::after{content:"";position:absolute;right:0;bottom:0;border-top:23px solid #bdd15a;border-right:23px solid #dfe7d1}
+    .human .specimen-tag{bottom:43px}
+    .stage-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:65px;padding:12px 23px;border-top:1px solid var(--line);background:var(--paper)}
+    .page-label{font:9px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.065em;color:var(--muted)}
+    .page-label span{color:var(--ink)}
+    .step-links{display:flex;align-items:center;gap:7px}
+    .step-link{height:31px;min-width:35px;display:grid;place-items:center;text-decoration:none;border:1px solid transparent;font:10px/1 var(--mono);color:var(--muted)}
+    .step-link:hover{border-color:var(--line)}
+    .step-link[aria-current="step"]{border-color:var(--ink);background:var(--ink);color:var(--paper)}
+    .understage{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:65px;font:10px/1.6 var(--mono);color:var(--muted)}
+    .tools{display:flex;gap:23px;align-items:center}
+    .text-button{padding:6px 0;border:0;background:none;font:10px/1.6 var(--mono);color:var(--muted);text-decoration:underline;text-underline-offset:4px}
+    .text-button:hover{color:var(--ink)}
+    .field-notes{border-top:1px solid var(--line);margin:0 0 35px;padding:14px 0;font-size:13px;line-height:1.7;color:var(--muted)}
+    .field-notes summary{cursor:pointer;font:10px/1.7 var(--mono);text-transform:uppercase;letter-spacing:.05em;padding:4px 0;width:fit-content}
+    .notes-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin:15px 0 9px}
+    .notes-grid p{max-width:490px;margin:0 0 15px}
+    .notes-grid ol{padding:0 0 0 18px;margin:0}
+    .notes-grid li{padding-left:6px;margin-bottom:14px}
+    .notes-grid a{text-underline-offset:3px}
+    .notes-grid strong{font-weight:600;color:var(--ink)}
+    .nojs{border:1px solid var(--line);padding:15px;font-size:13px}
+    .animate{animation:arrive .28s ease-out}
+    @keyframes arrive{from{opacity:.35;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+    @media (min-width:1350px){.shell{padding-left:44px;padding-right:44px}}
+    @media (max-width:1050px){
+      .shell{padding:0 25px}.panel-copy{padding-left:32px}.corebox{width:310px;height:402px;padding:18px}.tray{padding:0 8px;gap:9px}.well{width:68px}.box-tape{font-size:9px}.box-tape b{font-size:11px}.corebox .box-brand{font-size:22px}.cover-title{font-size:76px}.intro{max-width:305px}.sample-title{font-size:82px}.sample-body{font-size:17px;max-width:320px}.sample-payoff{font-size:22px;max-width:300px}.sample-art{min-height:628px}.sample-nav{gap:15px}.primary{gap:18px;padding:16px}.seam-note{right:40px;width:165px}.final-copy .sample-title{font-size:62px}.final-copy{padding-right:22px}.reply-option{padding:11px 10px}.specimen-tag{left:29px;right:29px}.blank-note{width:225px;height:270px}.mast-meta{gap:18px}.recipient{padding-left:18px}}
+    @media (max-width:760px){
+      .shell{padding:0 18px}.masthead{height:82px;gap:15px}.wordmark{font-size:10px;gap:9px}.mark{width:29px;height:29px;font-size:15px}.mast-meta{gap:0;font-size:8px}.edition{display:none}.recipient{padding-left:16px}.stage{margin-top:17px}.panel{grid-template-columns:1fr;min-height:0}.panel-copy{padding:34px 30px 30px;align-items:flex-start}.kicker{font-size:8px;margin-bottom:19px;gap:9px}.cover-title{font-size:clamp(62px,13vw,87px);margin-bottom:20px}.subtitle{font-size:21px;max-width:310px;margin-bottom:13px}.intro{font-size:13px;max-width:340px;line-height:1.65;margin-bottom:23px}.fiction{font-size:8px;max-width:100%;margin-top:12px}.primary{font-size:12px;padding:15px 17px;gap:28px}.button-note{font-size:8px;margin-top:10px}.cover-art{min-height:410px;background:#e8ecdc}.corebox{width:282px;height:351px;padding:15px;transform:rotate(-6deg) scale(.88);margin-top:-13px}.box-brand{margin-top:13px!important;font-size:20px!important}.box-head{padding-bottom:9px;font-size:7px}.box-brand span{font-size:8px}.tray{height:149px;margin-top:14px;margin-bottom:12px}.well{height:141px;width:63px}.rod{height:122px;width:45px}.box-tape{margin-top:14px;padding:9px;font-size:8px}.box-tape b{font-size:10px}.artifact-caption{bottom:17px;left:19px;right:19px;font-size:7px}.artifact-caption .plus{font-size:19px}.ritual-strip{padding:16px 20px;gap:12px;font-size:8px;align-items:flex-start}.ritual-strip .strip-label{max-width:50px}.ritual-strip .strip-rule{height:27px}.sample-title{font-size:75px;margin:3px 0 21px}.sample-body{font-size:17px;max-width:100%;margin-bottom:18px}.sample-payoff{font-size:22px;max-width:100%;margin-bottom:26px}.sample-nav{margin-top:0}.sample-art{min-height:448px}.sample-art::before{inset:19px}.art-numeral{top:32px;left:31px;font-size:107px}.vertical-caption{right:29px;top:37px;font-size:7px}.core-svg{width:180px;height:316px;margin-top:-14px}.specimen-tag{left:30px;right:30px;bottom:27px;padding:11px 14px}.specimen-tag span{font-size:8px}.specimen-tag strong{font-size:16px}.specimen-symbol{font-size:30px!important}.seam-note{top:102px;right:48px;width:150px;min-height:161px;padding:18px 16px;font-size:25px}.seam-note small{font-size:7px;margin-bottom:18px}.blank-note{width:216px;height:243px;margin-top:-16px;padding:28px 22px}.blank-note .handwriting{height:114px;font-size:92px}.blank-note small{font-size:8px}.blank-note .note-bottom{font-size:7px;left:22px}.blank-note .note-rule{left:22px;right:22px}.human .specimen-tag{bottom:27px}.final-copy{padding-top:33px;padding-bottom:27px}.final-copy .sample-title{font-size:61px;margin-bottom:19px}.final-copy .sample-body{font-size:13px;max-width:100%;margin-bottom:16px}.question{font-size:24px;max-width:100%;margin-bottom:18px}.reply-options{max-width:100%}.reply-option{padding:11px 12px}.reply-option strong{font-size:11px}.reply-option span{font-size:9px}.draft-box{max-width:100%}.draft-box textarea{font-size:10px;padding-top:14px}.reply-explainer{font-size:10px;max-width:100%}.stage-footer{padding:12px 17px;gap:10px}.page-label{font-size:7px;max-width:135px}.step-links{gap:3px}.step-link{min-width:30px;font-size:9px;height:29px}.understage{font-size:8px;min-height:62px;gap:12px;align-items:flex-start;padding-top:18px}.tools{gap:15px}.text-button{font-size:8px;padding:0;white-space:nowrap}.notes-grid{grid-template-columns:1fr;gap:5px}.field-notes{font-size:12px}.field-notes summary{font-size:9px}}
+    @media (max-width:360px){.shell{padding:0 12px}.panel-copy{padding-left:24px;padding-right:24px}.cover-title{font-size:57px}.recipient{padding-left:12px}.mast-meta{font-size:7px}.wordmark{font-size:9px}.subtitle{font-size:19px}.cover-art{min-height:389px}.reply-option{padding:10px 9px}.step-link{min-width:28px}.page-label{max-width:116px}.tools{gap:10px}.draft-box textarea{font-size:9px}.understage{font-size:7px}.text-button{font-size:7px}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.animate{animation:none}.primary{transition:none}.primary:hover{transform:none}}
+    @media print{
+      @page{size:letter landscape;margin:.35in}
+      *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+      html,body{background:white}.shell{padding:0;max-width:none}.masthead,.understage,.field-notes,.stage-footer,.nojs,.skip,.sample-nav,.primary,.button-note,.reply-options,.draft-label,.draft-box,.copy-status,.reply-explainer{display:none!important}.stage{border:0;margin:0}.panel,.panel[hidden]{display:grid!important;grid-template-columns:1fr 1fr;min-height:0;height:7.5in;border:1px solid var(--line);break-after:page;break-inside:avoid}.panel:last-of-type{break-after:auto}.panel-copy{padding:45px 22px 34px 40px}.cover-title{font-size:82px}.cover-art,.sample-art{min-height:0}.cover-art{background:#e7e9db}.corebox{transform:rotate(-7deg) scale(.9)}.ritual-strip{position:absolute;bottom:20px;left:30px;right:30px;background:var(--paper);display:none}.sample-title{font-size:83px}.sample-body{font-size:18px}.final-copy .sample-title{font-size:69px}.final-copy .sample-body{font-size:17px}.question{font-size:29px}.print-reply{display:block;font-size:16px;line-height:1.7;max-width:360px;margin-top:18px}.print-reply strong{font-family:var(--mono);font-size:14px}.print-signature{font:10px/1.6 var(--mono);margin-top:35px;max-width:350px}.specimen-tag{bottom:43px}.panel{position:relative}.fiction{font-size:11px}.kicker{font-size:11px}.seam-note{right:52px}.blank-note{transform:rotate(-6deg)}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#experience">Skip to the field kit</a>
+  <div class="shell">
+    <header class="masthead">
+      <div class="wordmark"><span class="mark" aria-hidden="true">↗</span><span>Saturday<br>Mining Co.</span></div>
+      <div class="mast-meta"><div class="edition">Speculative field kit<br><b>Edition for one</b></div><div class="recipient"><span>Prepared for</span><strong>James Cadwallader</strong></div></div>
+    </header>
+    <noscript><p class="nojs">The whole field kit is below. Read the three samples, then reply to Josh with LITHIUM or WILDER if you like. No JavaScript is needed to read it.</p></noscript>
+    <main class="stage" id="experience" aria-label="Saturday, Reopened field kit">
+      <section class="panel active" id="cover" data-panel="0" aria-labelledby="cover-title">
+        <div class="panel-copy">
+          <p class="kicker">A detour, made just for James</p>
+          <h1 class="cover-title" id="cover-title" tabindex="-1"><span>Saturday,</span><span class="second">Reopened.</span></h1>
+          <p class="subtitle">The company you didn’t build.</p>
+          <p class="intro">James, I made you a field kit from an alternate timeline. Three samples. One unfinished question.</p>
+          <a class="primary" href="#sample-01" data-go="1">Open the sample box <span aria-hidden="true">↗</span></a>
+          <p class="button-note">3 specimens / one human answer</p>
+          <p class="fiction">An imaginary mining company. A real origin story.<br>Made by Josh’s assistant.</p>
+        </div>
+        <div class="cover-art" aria-hidden="true">
+          <svg class="contour" viewBox="0 0 600 640" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#87966b" stroke-width=".9"><path d="M-70 405C-110 125 58-44 265-36S621 84 617 252 434 276 424 426 617 600 536 745"/><path d="M-45 393C-84 145 68-19 263-10S593 102 590 250 411 285 401 425 566 606 512 715"/><path d="M-20 381C-58 165 78 6 261 16S565 120 563 248 388 294 378 424 515 612 488 685"/><path d="M5 369C-32 185 88 31 259 42S537 138 536 246 365 303 355 423 464 618 464 655"/><path d="M30 357C-6 205 98 56 257 68S509 156 509 244 342 312 332 422 413 624 440 625"/><path d="M55 345C20 225 108 81 255 94S481 174 482 242 319 321 309 421 362 630 416 595"/><path d="M80 333C46 245 118 106 253 120S453 192 455 240 296 330 286 420 311 636 392 565"/><path d="M105 321C72 265 128 131 251 146S425 210 428 238 273 339 263 419 260 642 368 535"/><path d="M130 309C98 285 138 156 249 172S397 228 401 236 250 348 240 418 209 648 344 505"/></svg>
+          <div class="corebox">
+            <div class="box-head"><span>IMAGINARY EXPEDITION</span><span>FIELD BOX / 0001</span></div>
+            <div class="box-brand">SATURDAY<br>MINING CO.<span>THE LAPTOP-FREE EDITION</span></div>
+            <div class="tray"><div class="well"><div class="rod one"></div><span class="well-number">01 / Li</span></div><div class="well"><div class="rod two"></div><span class="well-number">02 / ?</span></div><div class="well"><div class="rod three"></div><span class="well-number">03 / …</span></div></div>
+            <div class="box-tape">For James Cadwallader<b>THE COMPANY YOU DIDN’T BUILD.</b></div>
+          </div>
+          <div class="artifact-caption"><span>Paper geology.<br>Entirely imagined.</span><span class="plus">+</span></div>
+        </div>
+      </section>
+      <section class="panel" id="sample-01" data-panel="1" aria-labelledby="sample-01-title">
+        <div class="panel-copy">
+          <p class="kicker">Sample 01 / The decoy</p>
+          <h2 class="sample-title" id="sample-01-title" tabindex="-1">Lithium.</h2>
+          <p class="sample-body">You and Dylan once explored lithium mining. Here’s an imaginary field kit for that path.</p>
+          <p class="sample-payoff">No drills. No mining rights. Just a very different Saturday.</p>
+          <div class="sample-nav"><a class="primary" href="#sample-02" data-go="2">Pull the next sample <span aria-hidden="true">→</span></a><a class="back-link" href="#cover" data-go="0">Box lid</a></div>
+          <div class="print-reply print-signature">An imaginary mining company. A real origin story.<br>Made for James Cadwallader by Josh’s assistant.</div>
+        </div>
+        <div class="sample-art mineral" aria-hidden="true">
+          <span class="art-numeral">01</span><span class="vertical-caption">Imaginary core / an actual detour</span>
+          <svg class="core-svg" viewBox="0 0 250 440" fill="none"><defs><clipPath id="mineral-clip"><path d="M49 63C49 34 201 34 201 63V374C201 410 49 410 49 374Z"/></clipPath><linearGradient id="shade"><stop stop-color="#152616" stop-opacity=".22"/><stop offset=".32" stop-color="#fff" stop-opacity=".08"/><stop offset=".58" stop-color="#fff" stop-opacity=".2"/><stop offset="1" stop-color="#142015" stop-opacity=".38"/></linearGradient></defs><g clip-path="url(#mineral-clip)"><path fill="#a3af8b" d="M40 30H210V415H40z"/><path fill="#71835d" d="m32 107 66 14 35-25 78 19v44l-78-18-55 27-46-20z"/><path fill="#c7cdb1" d="m32 160 70 23 54-18 60 12v51l-101 3-83-27z"/><path fill="#586e4b" d="m32 246 70-20 66 20 48-18v22l-78 30-44-5-62 8z"/><path fill="#bac49f" d="m32 301 66 15 66-35 52 31v65l-97-28-87 18z"/><path fill="#7b8e65" d="m32 380 82-15 102 12v48H32z"/><g stroke="#526547" opacity=".7"><path d="m39 89 67 20 54-20 49 12M43 138l40 12 49-30 77 18M47 201l63 11 70-5 31-12M40 295l54 3 78-40 32 9M45 348l78-17 74 24M49 388l63-7 89 16"/><path d="m79 55 17 23-5 19 23 25-5 37M161 178l-26 23 18 31-8 29M99 276l18 32-24 34 11 34"/></g><path fill="url(#shade)" d="M40 25H210V420H40z"/></g><path d="M49 63v311c0 36 152 36 152 0V63" stroke="#526447" stroke-width="1.2"/><ellipse cx="125" cy="63" rx="76" ry="25" fill="#bbc5a6" stroke="#526447" stroke-width="1.2"/><ellipse cx="125" cy="63" rx="48" ry="15" stroke="#8b9d76"/><path d="m80 58 26 8 22-11 29 7 21-4M99 51l12 24m34-26-7 28" stroke="#8b9d76"/><path d="M25 56v345m-5-345h11m-11 70h8m-8 69h8m-8 70h8m-8 68h8m-8 68h11" stroke="#829471" stroke-width="1"/></svg>
+          <div class="specimen-tag"><div><span>Specimen 01 / An idea from the board</span><strong>Lithium, almost.</strong></div><span class="specimen-symbol">Li</span></div>
+        </div>
+      </section>
+      <section class="panel" id="sample-02" data-panel="2" aria-labelledby="sample-02-title">
+        <div class="panel-copy">
+          <p class="kicker">Sample 02 / The real seam</p>
+          <h2 class="sample-title" id="sample-02-title" tabindex="-1">Answers.</h2>
+          <p class="sample-body">While researching ideas, you noticed yourself reaching for Perplexity instead of Google.</p>
+          <p class="sample-payoff">The interesting deposit was above ground.</p>
+          <div class="sample-nav"><a class="primary" href="#sample-03" data-go="3">Pull the last sample <span aria-hidden="true">→</span></a><a class="back-link" href="#sample-01" data-go="1">Back</a></div>
+          <div class="print-reply print-signature">An imaginary mining company. A real origin story.<br>Made for James Cadwallader by Josh’s assistant.</div>
+        </div>
+        <div class="sample-art seam" aria-hidden="true">
+          <span class="art-numeral">02</span><span class="vertical-caption">Same expedition / different deposit</span>
+          <svg class="core-svg" viewBox="0 0 250 440" fill="none"><defs><clipPath id="seam-clip"><path d="M49 63C49 34 201 34 201 63V374C201 410 49 410 49 374Z"/></clipPath></defs><g clip-path="url(#seam-clip)"><path fill="#a8b592" d="M40 30H210V415H40z"/><path fill="#75865f" d="m32 107 66 14 35-25 78 19v44l-78-18-55 27-46-20z"/><path fill="#c7cdb1" d="m32 160 70 23 54-18 60 12v51l-101 3-83-27z"/><path fill="#d9f26b" d="m32 218 82 24 102-20v22l-101 34-83-32z"/><path fill="#7c9160" d="M33 264h185v151H33z"/><path d="M32 303c71 28 125 28 184 0M32 315c71 28 125 28 184 0M32 329c71 28 125 28 184 0M32 343c71 28 125 28 184 0M32 357c71 28 125 28 184 0M32 371c71 28 125 28 184 0" stroke="#f3edca" stroke-width="8"/><path fill="url(#shade)" d="M40 25H210V420H40z"/></g><path d="M49 63v311c0 36 152 36 152 0V63" stroke="#526447" stroke-width="1.2"/><ellipse cx="125" cy="63" rx="76" ry="25" fill="#bac8a4" stroke="#526447" stroke-width="1.2"/><ellipse cx="125" cy="63" rx="48" ry="15" stroke="#8b9d76"/><path d="M25 56v345m-5-345h11m-11 70h8m-8 69h8m-8 70h8m-8 68h8m-8 68h11" stroke="#829471"/></svg>
+          <div class="seam-note"><small>Imagined field note</small>A different<br>type of<br>search.</div>
+          <div class="specimen-tag"><div><span>Specimen 02 / A change in the question</span><strong>Answers, actually.</strong></div><span class="specimen-symbol">?</span></div>
+        </div>
+      </section>
+      <section class="panel" id="sample-03" data-panel="3" aria-labelledby="sample-03-title">
+        <div class="panel-copy final-copy">
+          <p class="kicker">Sample 03 / The unmined part</p>
+          <h2 class="sample-title" id="sample-03-title" tabindex="-1">Judgment.</h2>
+          <p class="sample-body">Your September Profound note puts context and human judgment at the center. This last sample needs a little of yours.</p>
+          <p class="question">Was lithium the wildest idea on that whiteboard?</p>
+          <div class="reply-options" role="group" aria-label="Prepare an optional reply to Josh">
+            <button type="button" class="reply-option" data-choice="lithium" aria-pressed="false"><strong>LITHIUM</strong><span>That was the wildest.</span></button>
+            <button type="button" class="reply-option" data-choice="wilder" aria-pressed="false"><strong>WILDER</strong><span>There was something wilder.</span></button>
+          </div>
+          <label class="draft-label" for="reply-draft">Optional reply draft</label>
+          <div class="draft-box"><textarea id="reply-draft" rows="1" readonly aria-label="Reply draft; choose LITHIUM or WILDER first" placeholder="Choose a word above."></textarea><button type="button" class="copy-button" id="copy-reply" aria-label="Copy your reply draft">Copy</button></div>
+          <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+          <p class="reply-explainer">A draft only. Reply to Josh, or pass the word through the person who showed you this.</p>
+          <div class="print-reply"><strong>LITHIUM □ &nbsp; WILDER □</strong><p>If you feel like closing the loop, reply to Josh with LITHIUM or WILDER. One word is plenty.</p><p class="print-signature">Josh asked me to get your attention. I went back to the whiteboard. — Josh’s assistant</p></div>
+        </div>
+        <div class="sample-art human" aria-hidden="true">
+          <span class="art-numeral">03</span><span class="vertical-caption">No laptops / just a little context</span>
+          <div class="blank-note"><small>This part is yours.</small><span class="handwriting" id="note-answer">?</span><span class="note-rule"></span><span class="note-bottom">One word is plenty.</span></div>
+          <div class="specimen-tag"><div><span>Specimen 03 / One human answer</span><strong>The board is open.</strong></div><span class="specimen-symbol">…</span></div>
+        </div>
+      </section>
+      <div class="ritual-strip" id="ritual"><span class="strip-label">Original conditions</span><span class="strip-rule" aria-hidden="true"></span><span>Saturday. Dylan. A whiteboard. Post-it notes. No laptops.</span></div>
+      <nav class="stage-footer" aria-label="Field kit samples"><div class="page-label" id="page-label"><span>00 / THE BOX</span> &nbsp; · &nbsp; A speculative field kit</div><div class="step-links"><a class="step-link" href="#cover" data-go="0" aria-label="Box lid" aria-current="step">00</a><a class="step-link" href="#sample-01" data-go="1" aria-label="Sample 01: Lithium">01</a><a class="step-link" href="#sample-02" data-go="2" aria-label="Sample 02: Answers">02</a><a class="step-link" href="#sample-03" data-go="3" aria-label="Sample 03: Judgment">03</a></div></nav>
+    </main>
+    <footer class="understage"><span>Made by Josh’s assistant.<br>An imaginary company, for a very specific person.</span><div class="tools"><button class="text-button" type="button" id="print-all">Print all samples</button><a class="text-button" href="#field-notes" id="notes-link">Field notes ↗</a></div></footer>
+    <details class="field-notes" id="field-notes"><summary>Sources &amp; a note from the maker</summary><div class="notes-grid"><div><p><strong>Josh asked me to get your attention. I went back to the whiteboard. — Josh’s assistant</strong></p><p>Saturday Mining Co., the specimen box, the geology, and the imagined field note are a fictional design exercise. The public origin story and the ideas cited here are real. This is independent work, not a Profound product or a message from James or Dylan.</p><p>The choices make a reply draft on this device. Nothing is sent or recorded. If you like, reply to Josh or give the word to the person who showed you this.</p></div><ol><li><a href="https://www.knuckleup.co/episodes/james-cadwallader" target="_blank" rel="noopener noreferrer">James Cadwallader on Knuckle Up · origin story at 37:22</a><br>Saturday ideation with Dylan, laptop ban, whiteboard and Post-it notes, lithium research, and the switch toward Perplexity.</li><li><a href="https://www.tryprofound.com/blog/series-d" target="_blank" rel="noopener noreferrer">Building the AI platform for marketing · James Cadwallader · 16 September 2026</a><br>Context, steering, and human judgment in agent-led marketing.</li></ol></div></details>
+  </div>
+  <script>
+    (() => {
+      'use strict';
+      const panels = Array.from(document.querySelectorAll('[data-panel]'));
+      const labels = ['00 / THE BOX', '01 / LITHIUM', '02 / ANSWERS', '03 / JUDGMENT'];
+      const ids = ['cover', 'sample-01', 'sample-02', 'sample-03'];
+      const choices = [{"id": "lithium", "label": "LITHIUM", "description": "That was the wildest.", "draft": "Saturday, Reopened: LITHIUM."}, {"id": "wilder", "label": "WILDER", "description": "There was something wilder.", "draft": "Saturday, Reopened: WILDER."}];
+      const draft = document.getElementById('reply-draft');
+      const status = document.getElementById('copy-status');
+      const note = document.getElementById('note-answer');
+      const copyButton = document.getElementById('copy-reply');
+
+      function show(step, focus) {
+        const next = Number.isInteger(step) && step >= 0 && step < panels.length ? step : 0;
+        panels.forEach((panel, index) => {
+          panel.hidden = index !== next;
+          panel.classList.toggle('active', index === next);
+          panel.classList.toggle('animate', index === next);
+        });
+        document.querySelectorAll('.step-link').forEach((link) => {
+          if (Number(link.dataset.go) === next) link.setAttribute('aria-current', 'step');
+          else link.removeAttribute('aria-current');
+        });
+        document.getElementById('ritual').hidden = next !== 0;
+        document.getElementById('ritual').style.display = next === 0 ? '' : 'none';
+        document.getElementById('page-label').textContent = labels[next] + ' · A speculative field kit';
+        if (focus) {
+          panels[next].querySelector('h1,h2').focus({preventScroll:true});
+          if (window.innerWidth <= 760) document.getElementById('experience').scrollIntoView({behavior:'auto',block:'start'});
+        }
+      }
+      document.querySelectorAll('[data-go]').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          const step = Number(link.dataset.go);
+          show(step, true);
+          try { history.replaceState(null, '', '#' + ids[step]); } catch (_) { /* file viewer may restrict history */ }
+        });
+      });
+      window.addEventListener('hashchange', () => {
+        const next = ids.indexOf(location.hash.slice(1));
+        if (next >= 0) show(next, true);
+      });
+      document.querySelectorAll('[data-choice]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const choice = choices.find((entry) => entry.id === button.dataset.choice);
+          if (!choice) return;
+          draft.value = choice.draft;
+          draft.setAttribute('aria-label', 'Your optional reply draft, ready to copy');
+          note.textContent = choice.id === 'lithium' ? 'Li' : '…';
+          document.querySelectorAll('[data-choice]').forEach((option) => option.setAttribute('aria-pressed', String(option === button)));
+          status.textContent = 'Draft ready. Nothing has been sent.';
+          copyButton.textContent = 'Copy';
+        });
+      });
+      copyButton.addEventListener('click', async () => {
+        if (!draft.value) {
+          status.textContent = 'Choose LITHIUM or WILDER first.';
+          document.querySelector('[data-choice]').focus();
+          return;
+        }
+        let copied = false;
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(draft.value);
+            copied = true;
+          }
+        } catch (_) { /* fallback preserves an offline copy path */ }
+        if (!copied) {
+          draft.focus();
+          draft.select();
+          try { copied = document.execCommand('copy'); } catch (_) { copied = false; }
+        }
+        copyButton.textContent = copied ? 'Copied' : 'Select';
+        status.textContent = copied ? 'Copied. Reply to Josh, or pass it through the person who showed you this.' : 'Select the draft and copy it manually. Nothing has been sent.';
+      });
+      document.getElementById('notes-link').addEventListener('click', () => { document.getElementById('field-notes').open = true; });
+      document.getElementById('print-all').addEventListener('click', () => window.print());
+      const initial = ids.indexOf(location.hash.slice(1));
+      show(initial >= 0 ? initial : 0, false);
+    })();
+  </script>
+</body>
+</html>
